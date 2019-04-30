@@ -14,6 +14,27 @@
 
 // TODO: Write solution here
 
+let lifeStage: String
+
+switch 303 {
+case ..<0:
+    lifeStage = "Not born yet"
+case 0...2:
+    lifeStage = "Infant"
+case 3...12:
+    lifeStage = "Child"
+case 13...19:
+    lifeStage = "Teenager"
+case 20...39:
+    lifeStage = "Adult"
+case 40...60:
+    lifeStage = "Middle aged"
+case 61...:
+    lifeStage = "Elderly"
+case let age:
+    fatalError("Unaccounted for age \(age)")
+}
+
 
 /*:
  Write a switch statement that takes a tuple containing a `String` and an `Int`.  The `String` is a name, and the `Int` is an age. Use the same cases that you used above, and binding with `let` syntax, to assign the the name, followed by the life stage, to a `String` constant. For example, for the author of these challenges, you'd assign "Matt is an adult." to your constant.
@@ -21,6 +42,29 @@
 
 
 // TODO: Write solution here
+
+
+let lifeStageForName: String
+
+switch ("Jason", 303) {
+case (let name, ..<0):
+    lifeStageForName = "\(name) is Not born yet"
+case (let name, 0...2):
+    lifeStageForName = "\(name) is Infant."
+case (let name, 3...12):
+    lifeStageForName = "\(name) is Child."
+case (let name, 13...19):
+    lifeStageForName = "\(name) is Teenager."
+case (let name, 20...39):
+    lifeStageForName = "\(name) is Adult."
+case (let name, 40...60):
+    lifeStageForName = "\(name) is Middle aged."
+case (let name, 61...):
+    lifeStageForName = "\(name) is Elderly."
+case (_ ,let age):
+    fatalError("Unaccounted for age \(age)")
+}
+
 
 
 //: [Next](@next)

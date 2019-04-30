@@ -9,6 +9,13 @@
 
 // TODO: Write solution here
 
+var count = 0
+
+while count < 10 {
+    print("Count is \(count)")
+    count += 1
+}
+
 
 /*:
  **Simulate the roll of a six-sided die, and roll until you get a 6**
@@ -17,6 +24,18 @@
 
 
 // TODO: Write solution here
+
+var counter = 0
+var roll: Int
+
+repeat {
+    roll = Int.random(in: 1...6)
+    counter += 1
+//    if counter > 5 {
+//        break
+//    }
+    print("After \(counter) rolls, roll is \(roll)")
+} while roll != 6 && counter < 6
 
 
 /*:
